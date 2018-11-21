@@ -8,9 +8,10 @@ import java.util.*;
 
 public class Read {
 
-    static Map<String, String> dict = new HashMap<String, String>();
+    static Map<String, String> dict = new HashMap<String, String>(); // todo private
+    // todo add getter
 
-    public static void read () {
+    public static void read () { // todo return map<>
         try (FileReader fr = new FileReader("dict.txt");
              Scanner scan = new Scanner(fr))
         {

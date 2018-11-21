@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Bot {
     public static void main(String[] args) {
-        Read.read();
-        Chat chat = new Chat();
+        Read.read(); // todo map
+        Chat chat = new Chat(); // todo inject map
         chat.run();
 
 
