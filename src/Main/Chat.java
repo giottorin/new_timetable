@@ -2,14 +2,19 @@ package Main;
 
 import sun.applet.Main;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Chat {
 
-    // todo add map field
+
+    Read read = new Read();
+    private Map<String, String> dictionary = read.read();
 
 
     public void run(){
+
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Hello \n"+ getanser("help"));
@@ -22,9 +27,11 @@ public class Chat {
         }
         scan.close();
     }
-    public String getanser(String str) { // todo camel case
-        String x = Read.dict.get(str);
+
+    public String getanser(String str) {
+        String x = dictionary.get(str);
         return x;
     }
+
 
 }

@@ -8,10 +8,8 @@ import java.util.*;
 
 public class Read {
 
-    static Map<String, String> dict = new HashMap<String, String>(); // todo private
-    // todo add getter
-
-    public static void read () { // todo return map<>
+    public Map<String, String> read () {
+        Map<String, String> dict = new HashMap<String, String>();
         try (FileReader fr = new FileReader("dict.txt");
              Scanner scan = new Scanner(fr))
         {
@@ -21,15 +19,12 @@ public class Read {
                 i++;
 
             }
-            fr.close();
         }
         catch (Exception ex){
             System.out.println(ex.getMessage());
         }
-
-
-
-
+        return dict;
     }
+
 }
 
