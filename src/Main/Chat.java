@@ -9,28 +9,21 @@ import java.util.Scanner;
 public class Chat {
 
 
-    Read read = new Read();
-    private Map<String, String> dictionary = read.read();
-
-
     public void run(){
-
+        Read reader = new Read();
+        Map<String, String>dict = reader.read();
+        
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Hello \n"+ getanser("help"));
+        System.out.println("Hello \n"+ dict.get("help"));
         while (true){
             String s = scan.nextLine().toLowerCase();
             if (s.equals("exit"))
                 break;
             else
-                System.out.println(getanser(s));
+                System.out.println(dict.get(s));
         }
         scan.close();
-    }
-
-    public String getanser(String str) {
-        String x = dictionary.get(str);
-        return x;
     }
 
 
